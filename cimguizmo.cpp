@@ -59,9 +59,13 @@ CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OP
 {
     return ImGuizmo::Manipulate(view,projection,operation,mode,matrix,deltaMatrix,snap,localBounds,boundsSnap);
 }
-CIMGUI_API void ImGuizmo_ViewManipulate(float* view,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor)
+CIMGUI_API void ImGuizmo_ViewManipulate_Float(float* view,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor)
 {
     return ImGuizmo::ViewManipulate(view,length,position,size,backgroundColor);
+}
+CIMGUI_API void ImGuizmo_ViewManipulate_FloatPtr(float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor)
+{
+    return ImGuizmo::ViewManipulate(view,projection,operation,mode,matrix,length,position,size,backgroundColor);
 }
 CIMGUI_API void ImGuizmo_SetID(int id)
 {
